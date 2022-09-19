@@ -80,7 +80,7 @@
         android:width="48dp"
         android:height="32dp"
         android:text="0"
-        android:layout_gravity="left"
+        android:textAlignment="center"
         android:textSize="28dp"
         app:layout_column="0"
         app:layout_row="0"
