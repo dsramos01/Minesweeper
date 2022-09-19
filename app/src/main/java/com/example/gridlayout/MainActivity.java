@@ -312,6 +312,11 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
             if (count >=80) {
+                for (TextView curr : cell_tvs) {
+                    if (curr.getHint().toString().equals(getResources().getString(R.string.mine))) {
+                        curr.setText(getResources().getString(R.string.mine));
+                    }
+                }
                 Intent intent = new Intent(this, EndScreen.class);
                 intent.putExtra("TimeUsed", String.valueOf(seconds));
                 intent.putExtra("GameState", "Win");
