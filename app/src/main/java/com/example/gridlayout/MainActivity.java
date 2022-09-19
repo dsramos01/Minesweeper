@@ -449,7 +449,7 @@ public class MainActivity extends AppCompatActivity {
 
                 String time = String.format("%d",seconds);
                 timeView.setText(time);
-                if ((running) & (seconds < 99)) {
+                if ((running) & (seconds < 999)) {
                     seconds++;
                 }
                 handler.postDelayed(this, 1000);
