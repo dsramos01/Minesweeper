@@ -87,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         Random rand = new Random();
-
+        ArrayList<Integer> list = new ArrayList<>();
         for (int j=0;j<4;j++) {
             int currInt = rand.nextInt(80);
             TextView currCell = cell_tvs.get(currInt);
