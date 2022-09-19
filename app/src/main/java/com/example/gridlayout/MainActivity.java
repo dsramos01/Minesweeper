@@ -87,9 +87,19 @@ public class MainActivity extends AppCompatActivity {
             }
         }
         Random rand = new Random();
+        // Make sure there's always four bombs and no two bombs fall in the same cell
         ArrayList<Integer> list = new ArrayList<>();
+        list.add(0);
         for (int j=0;j<4;j++) {
             int currInt = rand.nextInt(80);
+
+            for (int k : list) {
+                while (k == currInt) {
+                    currInt = rand.nextInt(80);
+                }
+            }
+            list.add(currInt);
+
             TextView currCell = cell_tvs.get(currInt);
             currCell.setHint(R.string.mine);
             currCell.setText("-1");
