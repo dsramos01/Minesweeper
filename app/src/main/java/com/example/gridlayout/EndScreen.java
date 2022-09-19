@@ -23,6 +23,9 @@ public class EndScreen extends AppCompatActivity {
         String message;
         if (winCheck.equals("Win")) {
             message = "Used " + timeUsed + " seconds.\nYou Win!\nGood Job!";
+            if (Integer.parseInt(timeUsed) < 20) {
+                message += "\nWow, Minesweeper Master!";
+            }
         }
         else {
             message = "Used " + timeUsed + " seconds.\nYou lost.\nNice try!";
